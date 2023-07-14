@@ -1,0 +1,12 @@
+<?php
+$servername = "sharing_mysql";  // Replace with your server name if different
+$username = "root";  // Replace with your MySQL username
+$password = "";  // Replace with your MySQL password
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=sharing", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+?>
